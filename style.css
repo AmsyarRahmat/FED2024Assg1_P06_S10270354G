@@ -1,4 +1,814 @@
-p{
-    color: red;
-    font-size: 20px;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #191919; 
 }
+
+/* removes the underline from links, sets their color to inherit from parent elements. */
+a {
+    text-decoration: none;
+}
+
+/* highlight for current page in menu */
+a.active {
+    color: #ff4d4d;
+}
+
+/* Buttons styling */
+button {
+    background-color: #ff4d4d;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer; /* changes cursor to pointer on hover */
+    border-radius: 5px; /* rounds the corners */
+    font-size: 1em; 
+    transition: background-color 0.3s ease; /* smooth hover transition effect */
+}
+
+/* changes button background color when hovered for an interactive effect */
+button:hover {
+    background-color: #e60000;  /* button hover effect */
+}
+
+/* Logo container styling */
+.logo {
+    width: 60px;
+    height: 60px;
+    overflow: hidden; /* hides overflow */
+    border-radius: 50%; /* circular logo */
+    background-color: #353232; 
+}
+
+/* styles the button inside the logo area */
+.logo-button {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    cursor: pointer;
+}
+
+/* navbar styling */
+.navbar {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 30px; 
+    background-color: #000; 
+}
+
+/* navbar list styling */
+.navbar nav ul {
+    display: flex; 
+    list-style: none; /* Removes default bullet points */
+    padding: 0; 
+}
+
+/* spacing between navbar list items */
+.navbar nav ul li {
+    margin: 0 20px;
+}
+
+/* navbar links styling */
+.navbar nav ul li a {
+    color: #fff;
+    font-size: 1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: color 0.3s ease; /* smooth hover effect for color */
+}
+
+/* changes link color when hovered for a visual effect */
+.navbar nav ul li a:hover {
+    color: #ff4d4d; /* link hover effect */
+}
+
+/* styles the active link in the navbar */
+.navbar nav ul li a.active {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+/* Footer styling */
+footer {
+    background-color: #000; 
+    color: #fff; 
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8em; 
+}
+
+
+/* Index Page */
+.index-top {
+    background: url('./images/jacked.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.index-top-content h1 {
+    font-size: 3em;
+    margin: 0.5em 0;
+}
+
+.index-top-content p {
+    font-size: 1.4em;
+}
+
+.index-top-content button {
+    margin-top: 1.5em;
+    font-size: 1.2em;
+    padding: 12px 30px;
+}
+
+.index-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding: 50px 20px;
+    background-color: #353232;
+    color: #fff;
+    text-align: center;
+}
+
+.index-info-block {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.index-info-block h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.index-info-block p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+.index-info-block button {
+    margin-top: 20px;
+    padding: 10px 20px;
+}
+
+.index-features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    gap: 20px; 
+}
+
+.index-feature-card {
+    text-align: center;
+    width: 20%;
+    background-color: #B71717;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: black;
+    margin: 10px; 
+    height: 350px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+/* Alternate color for cards */
+.index-feature-card:nth-child(1),
+.index-feature-card:nth-child(3) {
+    background-color: #B71717;
+}
+
+.index-feature-card:nth-child(2),
+.index-feature-card:nth-child(4) {
+    background-color: #CE2424;
+}
+
+.index-feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.index-feature-card p {
+    margin-bottom: 10px;
+}
+
+.index-feature-card button {
+    background-color: #fff;
+    color: #B71717;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.index-feature-card:hover {
+    background-color: #D40000; /* card hover effect */
+    transition: background-color 0.3s ease;
+}
+
+
+/* Contact Us Page */
+body.contact-us {
+    background-color: #191919;
+    color: #ffffff;
+}
+
+.contact-us .contact-inquiry-section {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.contact-us .highlight {
+    color: #ff0000;
+}
+
+.contact-us .contact-helpful-info-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px auto;
+}
+
+.contact-helpful-info-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 60px auto;
+}
+
+.contact-helpful-info-card {
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    width: 300px;
+}
+
+.contact-helpful-info-card img {
+    max-width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.contact-helpful-info-card h3 {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #000000;
+}
+
+.contact-helpful-info-card p {
+    font-size: 14px;
+    color: #000000;
+    margin: 10px 0;
+}
+
+.contact-helpful-info-card button {
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.contact-helpful-info-card button:hover {
+    background-color: #d40000; /* card hover effect */
+}
+
+
+/* About Page */
+.about {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 50px 20px;
+    background-color: #191919;
+    color: white;
+    text-align: right; 
+}
+
+.about-autobiography {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.about-autobiography h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+
+.about-autobiography p {
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+.about-trainer-image {
+    width: 40%;
+}
+
+.about-trainer-photo {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-cta-section {
+    background-color: #B71717;
+    color: #fff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.about-cta-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about-cta-section p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.about-cta-section button {
+    background-color: #fff;
+    color: #B71717;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.about-cta-section button:hover {
+    background-color: #e60000; /* card hover effect */
+}
+
+/* Fitness Plans Page */
+.fp-top {
+    background-color: #191919;
+    color: #fff;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.fp-top h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fp-top p {
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.fp-top button {
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fp-top button:hover {
+    background-color: #e60000; /* card hover effect */
+}
+
+.fp-features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    background-color: #191919;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.fp-features div {
+    background-color: #252525;
+    padding: 40px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.fp-features div:hover {
+    transform: scale(1.05);
+}
+
+.fp-features h3 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff4d4d;
+}
+
+.fp-features p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.fp-goals {
+    background-color: #191919;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.fp-goals div {
+    margin-bottom: 80px;
+}
+
+.fp-goals h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: white;
+    position: relative;
+}
+
+.fp-goals h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    background-color: #ff4d4d;
+    margin: 8px auto 0;
+}
+
+.fp-goals p {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.fp-journey {
+    background-color: #191919;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.fp-journey h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.fp-journey p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+form div {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000;
+}
+
+form input[type="text"],
+form input[type="email"] {
+    width: 97%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+form button {
+    background-color: #ff4d4d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e60000; /* card hover effect */
+}
+
+
+/* Blog Page */
+.blog, .blog-2, .blog-3 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin: 20px;
+  }
+  
+  .blog img, .blog-2 img, .blog-3 img {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .blog-post, .blog-2-post, .blog-3-post {
+    flex: 1;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin: 0 0 10px;
+    color: #ff4040;
+  }
+  
+  h2 {
+    font-size: 18px;
+    margin: 0 0 20px;
+    color: #ff4040;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+    color: #fff;
+  }
+    
+/* Results Page */
+.results {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 40px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+}
+  
+.results h1 {
+    font-size: 32px;
+    color: #ff4040;
+    margin-bottom: 10px;
+}
+  
+.results h2 {
+    font-size: 20px;
+    color: #ff4040;
+    margin-bottom: 30px;
+}
+  
+.results-grid {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+  
+.top-image {
+    grid-column: 1 / -1;
+    width: 100%; 
+    max-width: 100%; 
+}
+  
+.result-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    width: 90%; 
+    max-width: 500px;
+    margin: auto;
+}  
+
+.result-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.result-item:hover img {
+    transform: scale(1.05); /* zooms in on image */
+    transition: transform 0.3s ease-in-out;
+}
+
+.trainers {
+    text-align: center;
+    background-color: #1e1e1e;
+    padding: 40px;
+    color: #fff;
+  }
+  
+  .trainers h1 {
+    font-size: 32px;
+    color: #ff4040;
+    margin-bottom: 30px;
+  }
+  .trainers h1::after {
+    content: "";
+    display: block;
+    width: 300px;
+    height: 3px;
+    background-color: #ff4d4d;
+    margin: 8px auto 0;
+}
+  
+  .trainer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; 
+    align-items: center;
+  }
+  
+  .trainer-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    max-width: 500px;
+    width: 90%; 
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .trainer-card:hover {
+    transform: scale(1.05); /* zooms in a little */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
+  }
+  
+  .trainer-photo {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+  }
+  
+  .trainer-card h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #ff4040;
+  }
+  
+  .trainer-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #ff7f7f;
+  }
+  
+  .trainer-card p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #dcdcdc;
+    margin-bottom: 20px;
+  }
+  
+  .contact-btn {
+    background-color: #ff4040;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .contact-btn:hover {
+    background-color: #ff7f7f;
+  }
+  
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    /* Navbar */
+    .navbar nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar nav ul li {
+        margin: 0;
+    }
+
+    /* Index Page */
+    .index-info {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 10px;
+    }
+
+    .index-info-block {
+        width: 100%;
+    }
+
+    .index-features {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .index-feature-card {
+        width: 100%;
+    }
+
+    /* Contact Us Page */
+    .contact-helpful-info-section {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .contact-helpful-info-card {
+        width: 100%;
+    }
+
+    /* About Page */
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .about-autobiography,
+    .about-trainer-image {
+        width: 100%;
+        padding: 0;
+    }
+
+    .about-autobiography h1 {
+        text-align: center;
+    }
+
+    /* Fitness Plans Page */
+    .fp-features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Trainers Section */
+    .trainer-container {
+        gap: 20px;
+    }
+
+    .trainer-card {
+        width: 100%;
+    }
+
+    /* Blog Page */
+    .blog, .blog-2, .blog-3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog img, .blog-2 img, .blog-3 img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Results Page */
+    .results-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+/* commits */
